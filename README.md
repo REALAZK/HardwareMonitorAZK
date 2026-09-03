@@ -7,7 +7,7 @@ raw ACPI/SMBIOS tables) over high-level OS APIs wherever the execution
 environment allows it, and is explicit whenever something is genuinely
 unavailable rather than fabricating a value.
 
-## Status
+## Status and stuff
 
 | Phase | What | Status |
 |---|---|---|
