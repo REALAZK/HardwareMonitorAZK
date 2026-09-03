@@ -1,0 +1,36 @@
+## @file
+#  Pre-boot hardware inventory: CPUID, UEFI memory map, and ACPI/SMBIOS
+#  table discovery via the EFI Configuration Table -- runs before any OS
+#  has loaded, demonstrating the same architectural interfaces (CPUID)
+#  used by the native app, plus firmware-native memory/ACPI/SMBIOS access
+#  that user mode can only get at secondhand through OS APIs.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = HwMonUefi
+  FILE_GUID                      = 5b1e9f2a-6c3d-4e11-9a2b-8f7d0c1e2a32
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  HwMonUefi.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+  UefiBootServicesTableLib
+  BaseLib
+  PrintLib
+
+[Guids]
+  gEfiAcpi10TableGuid
+  gEfiAcpi20TableGuid
+  gEfiSmbiosTableGuid
+  gEfiSmbios3TableGuid

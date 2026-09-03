@@ -1,0 +1,27 @@
+# Unrelated nested git repo found in this directory (not created by this
+# project) -- excluded rather than touched.
+/HardwareMonitor/
+
+# Build outputs
+build/
+*.obj
+*.exe
+*.sys
+*.efi
+*.pdb
+*.map
+*.lib
+*.ilk
+*.dll
+
+# Vendored EDK2 clone -- huge, third-party, re-cloned by uefi/setup_edk2.bat
+uefi/edk2/
+
+# Portable tool download (re-fetched by uefi/setup_edk2.bat)
+uefi/nasm-3.02/
+uefi/nasm.zip
+
+# QEMU test scratch (firmware copies, test ESP image)
+uefi/test_esp/
+uefi/test_bios.fd
+uefi/test_vars.fd
